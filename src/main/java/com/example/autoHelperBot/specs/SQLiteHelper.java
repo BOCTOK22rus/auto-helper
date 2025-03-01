@@ -11,9 +11,7 @@ public class SQLiteHelper {
     public SQLiteHelper() {
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
-            System.out.println("Соединение с базой данных установлено.");
-        } catch (SQLException e) {
-            System.out.println("Ошибка подключения к базе данных: " + e.getMessage());
+        } catch (SQLException ignored) {
         }
     }
 
@@ -25,8 +23,7 @@ public class SQLiteHelper {
             pstmt.setString(2, commandBot);
             pstmt.setString(3, requestTime);
             pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println("Ошибка при добавлении записи: " + e.getMessage());
+        } catch (SQLException ignored) {
         }
     }
 
@@ -38,8 +35,7 @@ public class SQLiteHelper {
             pstmt.setString(2, mileageReplacement);
             pstmt.setString(3, createTime);
             pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println("Ошибка при добавлении записи: " + e.getMessage());
+        } catch (SQLException ignored) {
         }
     }
 
@@ -51,8 +47,7 @@ public class SQLiteHelper {
             pstmt.setString(2, mileageReplacement);
             pstmt.setString(3, createTime);
             pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println("Ошибка при добавлении записи: " + e.getMessage());
+        } catch (SQLException ignored) {
         }
     }
 
@@ -65,8 +60,7 @@ public class SQLiteHelper {
             pstmt.setString(3, timestamp);
             pstmt.setString(4, createTime);
             pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println("Ошибка при добавлении записи: " + e.getMessage());
+        } catch (SQLException ignored) {
         }
     }
 
@@ -77,8 +71,7 @@ public class SQLiteHelper {
             pstmt.setString(1, name);
             pstmt.setString(2, createTime);
             pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println("Ошибка при добавлении записи: " + e.getMessage());
+        } catch (SQLException ignored) {
         }
     }
 
